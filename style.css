@@ -1,0 +1,68 @@
+.glass-morphism {
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-glow {
+    text-shadow: 0 0 15px currentColor;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, rgb(251 191 36), rgb(255 255 255), rgb(245 158 11));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.scanline {
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.5) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+}
+
+.stars {
+    background: white;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle var(--duration) ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+.pulse-delay-3 {
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes twinkle {
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: var(--max-opacity);
+    }
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}

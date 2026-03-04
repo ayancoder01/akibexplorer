@@ -1,0 +1,7 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/akibwork/public_html/mcu
+    - /bin/cp -R * $DEPLOYPATHdeployment:
+  tasks:
+    - export DEPLOYPATH=/home/akibwork/public_html/mcu
+    - /bin/cp -R * $DEPLOYPATH
